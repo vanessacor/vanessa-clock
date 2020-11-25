@@ -3,18 +3,18 @@ let interval;
 
 function today() {
   interval = setInterval(() => {
-    let time = new Date(Date.now());
+    let date = new Date(Date.now());
 
-    let now = {
-      weekDay: dayNames[time.getDay()],
-      dayOfMonth: time.getDate(),
-      month: monthNames[time.getMonth()],
-      year: time.getFullYear(),
-      hour: time.getHours(),
-      minutes: time.getMinutes(),
-      seconds: time.getSeconds(),
+    let today = {
+      weekDay: dayNames[date.getDay()],
+      dayOfMonth: date.getDate(),
+      month: monthNames[date.getMonth()],
+      year: date.getFullYear(),
+      hour: date.getHours(),
+      minutes: date.getMinutes(),
+      seconds: date.getSeconds(),
     };
-    printClock(now);
+    printClock(today);
   }, 1000);
 }
 

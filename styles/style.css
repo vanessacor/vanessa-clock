@@ -30,6 +30,8 @@ main {
 #services button {
   max-width: 200px;
   margin-top: 50px;
-  background-color: #66fcf1;
-  color: #0b0c10;
+  border: none;
+  background-color: transparent;
+  color: #66fcf1;
+  text-shadow: 2px 2px 8px #03a79c;
 }
