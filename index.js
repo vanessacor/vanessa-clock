@@ -14,7 +14,7 @@ function today() {
       minutes: time.getMinutes(),
       seconds: time.getSeconds(),
     };
-    return now;
+    printClock(now);
   }, 1000);
 }
 
@@ -43,3 +43,5 @@ const monthNames = [
   "November",
   "December",
 ];
+
+window.addEventListener("load", today);
