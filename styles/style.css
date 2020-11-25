@@ -9,17 +9,27 @@ main {
 #calendar {
   display: flex;
   font-family: "Montserrat", sans-serif;
-  color: #66fcf1;
+  color: #ff69b4;
 }
 
 #clock {
   display: flex;
   justify-content: center;
   font-family: "Audiowide", cursive;
-  color: #66fcf1;
+  color: #ff69b4;
+  text-shadow: 2px 2px 8px #e60073;
 }
 
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 100px;
+}
 #services button {
+  max-width: 200px;
+  margin-top: 50px;
   background-color: #66fcf1;
   color: #0b0c10;
 }
