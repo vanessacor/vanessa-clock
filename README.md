@@ -23,6 +23,5 @@ Bootcamp exercise. I was asked to develop a mini application similar to a stopwa
 
 ### Instalation
 
-
 ## Run Tests
 
