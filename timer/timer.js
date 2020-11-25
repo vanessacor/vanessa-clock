@@ -10,9 +10,16 @@ function startTimer(minutes) {
   let timeTofinish = startTime.setMinutes(startTime.getMinutes() + minutes);
   interval = setInterval(() => {
     let countDownTime = timeDiff.getTimeDifference(timeTofinish);
-    countDownTime = format.formatTime(countDownTime);
+    if (countDownTime < 0) {
+      stopTimer();
+      return;
+    } else countDownTime = format.formatTime(countDownTime);
     console.log(countDownTime);
   }, 1000);
 }
 
-startTimer(5);
+function stopTimer() {
+  clearInterval(interval);
+}
+
+startTimer(1);
