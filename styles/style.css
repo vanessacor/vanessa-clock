@@ -7,14 +7,13 @@ main {
 }
 
 #calendar {
-  display: flex;
+  text-align: center;
   font-family: "Montserrat", sans-serif;
   color: #ff69b4;
 }
 
 #clock {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-family: "Audiowide", cursive;
   color: #ff69b4;
   text-shadow: 2px 2px 8px #e60073;
@@ -22,16 +21,21 @@ main {
 
 #services {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-content: center;
   justify-content: space-around;
   padding-top: 100px;
 }
-#services button {
+
+.services-btn {
   max-width: 200px;
   margin-top: 50px;
   border: none;
   background-color: transparent;
   color: #66fcf1;
   text-shadow: 2px 2px 8px #03a79c;
+}
+
+.services-btn:hover {
+  border: 2px solid #66fcf1;
 }
