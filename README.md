@@ -1,13 +1,12 @@
 # Timer
 
-
 ## Description
 
 Bootcamp exercise. I was asked to develop a mini application similar to a stopwatch or countdown.
 
-## Project Requirements 
+## Project Requirements
 
-- Deliver the code in a repository 
+- Deliver the code in a repository
 - An attractive ReadMe
 - Must be deployed.
 
@@ -15,7 +14,7 @@ Bootcamp exercise. I was asked to develop a mini application similar to a stopwa
 
 ## Built with
 
-- Frontend: HTML, CSS and vanilla JavaScript.
+- Frontend: HTML, CSS, [Bootstrap](https://getbootstrap.com/) and vanilla JavaScript.
 
 ## Getting Started
 
@@ -24,4 +23,3 @@ Bootcamp exercise. I was asked to develop a mini application similar to a stopwa
 ### Instalation
 
 ## Run Tests
-
