@@ -1,6 +1,5 @@
 "use strict";
 
-const format = require("../Utils/formatTime");
 const timeDiff = require("../Utils/getTimeDifference");
 
 let interval;
@@ -13,7 +12,7 @@ function startTimer(minutes) {
     if (countDownTime < 0) {
       stopTimer();
       return;
-    } else countDownTime = format.formatTime(countDownTime);
+    } else countDownTime = formatTime(new Date(countDownTime));
     console.log(countDownTime);
   }, 1000);
 }

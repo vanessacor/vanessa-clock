@@ -1,6 +1,5 @@
 "use strict";
 
-const format = require("../Utils/formatTime");
 const timeDifference = require("../Utils/getTimeDifference");
 
 let interval;
@@ -10,7 +9,7 @@ function startCountDown(date) {
   interval = setInterval(() => {
     let countDownTime = timeDifference.getTimeDifference(futureDate);
 
-    countDownTime = format.formatTime(countDownTime);
+    countDownTime = formatTime(new Date(countDownTime));
     console.log(countDownTime);
   }, 1000);
 }

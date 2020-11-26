@@ -1,22 +1,39 @@
 "use strict";
 
-function formatTime(time) {
-  const oneSecond = 1000;
-  const seconds = Math.floor((time / oneSecond) % 60);
-  const minutes = Math.floor((time / oneSecond / 60) % 60);
-  const hours = Math.floor((time / (oneSecond * 60 * 60)) % 24);
-  const days = Math.floor(time / (oneSecond * 60 * 60 * 24));
-  const months = Math.floor(days / 30);
-  const years = Math.floor(days / 365);
+const dayNames = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
-  return {
-    seconds,
-    minutes,
-    hours,
-    days,
-    months,
-    years,
+function formatTime(date) {
+  let dateFormated = {
+    weekDay: dayNames[date.getDay()],
+    dayOfMonth: date.getDate(),
+    month: monthNames[date.getMonth()],
+    year: date.getFullYear(),
+    hour: date.getHours(),
+    minutes: date.getMinutes(),
+    seconds: date.getSeconds(),
   };
-}
 
-module.exports = { formatTime };
+  return dateFormated;
+}
