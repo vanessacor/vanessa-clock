@@ -19,10 +19,11 @@ function handleSubmit(event) {
 }
 
 function startTimer(minutes) {
-  let startTime = new Date(Date.now());
-  let timeTofinish = startTime.setMinutes(startTime.getMinutes() + minutes);
+  const miliseconds = minutes * 60000;
+  let startTime = Date.now() + miliseconds;
+
   timerInterval = setInterval(() => {
-    let countDownTime = getTimeDifference(timeTofinish);
+    let countDownTime = getTimeDifference(startTime);
     if (countDownTime < 0) {
       stopTimer();
       return;
@@ -36,6 +37,6 @@ function stopTimer() {
 }
 
 function printTimer(date) {
-  const clockTimer = document.getElementById("clock-timer");
   clockTimer.innerHTML = `${date.minutes} : ${date.seconds}`;
 }
+
