@@ -3,7 +3,7 @@
 let interval;
 
 function startClock() {
-  interval = setInterval(() => {
+  timerInterval = setInterval(() => {
     let date = new Date(Date.now());
 
     let today = formatTime(date);

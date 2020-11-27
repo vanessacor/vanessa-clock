@@ -11,18 +11,45 @@
 </head>
 <body>
     <main class="container">
-        <h2 id="calendar">Sunday, 9 December 1906</h2>
-    
-        <h2 id="clock">12 : 23 : 45</h2>
-        <section id="services">
-            <button class="services-btn" id="timer">TIMER</button>
-            <button class="services-btn" id="countdown">COUNTDOWN</button>
-            <button class="services-btn" id="stopWatch">STOPWATCH</button>
+        <section id="home">
+            <h2 id="calendar">Sunday, 9 December 1906</h2>
+            <h2 class="clock-display" id="clock">12 : 23 : 45</h2>
+
+            <div id="services">
+                <button class="services-btn" id="timer">TIMER</button>
+                <button class="services-btn" id="countdown">COUNTDOWN</button>
+                <button class="services-btn" id="stopWatch">STOPWATCH</button>
+            </div>
+
+        </section>
+        <section id="timer">
+            <h2 class="clock-display" id="clock-timer">00 : 00</h2>
+
+            <form action="">
+                <div class="form-group">
+                <label for="minutes"></label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="minutes-timer" 
+                    aria-label="input minutes" 
+                    placeholder="Please Insert Minutes"
+                    min="0"
+                    max="60"
+                >
+            </form>
+
+            <div id="services">
+                <button type="submit" class="services-btn" id="start-timer">START</button>
+                <button class="services-btn" id="stop-timer">STOP</button>
+            </div>
 
         </section>
 
     </main>
     <script src="./Utils/formatTime.js"></script>
+    <script src="./Utils/getTimeDifference.js"></script>
+    <script src="./timer/timer.js"></script>
     <script src="indexUi.js"></script>
     <script src="index.js"></script>
 </body>

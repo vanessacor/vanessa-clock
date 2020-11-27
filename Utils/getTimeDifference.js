@@ -5,5 +5,3 @@ function getTimeDifference(date) {
   const todayDate = Date.now();
   return futureDate - todayDate;
 }
-
-module.exports = { getTimeDifference };

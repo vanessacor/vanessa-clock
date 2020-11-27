@@ -1,24 +1,41 @@
 "use strict";
 
-const timeDiff = require("../Utils/getTimeDifference");
+const startTimerBtn = document.getElementById("start-timer");
+const stopTimerBtn = document.getElementById("stop-timer");
+const inputMinutes = document.getElementById("minutes-timer");
+const clockTimer = document.getElementById("clock-timer");
 
-let interval;
+let timerInterval;
+
+startTimerBtn.addEventListener("click", handleSubmit);
+stopTimerBtn.addEventListener("click", stopTimer);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const minutes = inputMinutes.value;
+  if (minutes) {
+    startTimer(minutes);
+  } else console.log("please insert time");
+}
 
 function startTimer(minutes) {
   let startTime = new Date(Date.now());
   let timeTofinish = startTime.setMinutes(startTime.getMinutes() + minutes);
-  interval = setInterval(() => {
-    let countDownTime = timeDiff.getTimeDifference(timeTofinish);
+  timerInterval = setInterval(() => {
+    let countDownTime = getTimeDifference(timeTofinish);
     if (countDownTime < 0) {
       stopTimer();
       return;
     } else countDownTime = formatTime(new Date(countDownTime));
-    console.log(countDownTime);
+    printTimer(countDownTime);
   }, 1000);
 }
 
 function stopTimer() {
-  clearInterval(interval);
+  clearInterval(timerInterval);
 }
 
-startTimer(1);
+function printTimer(date) {
+  const clockTimer = document.getElementById("clock-timer");
+  clockTimer.innerHTML = `${date.minutes} : ${date.seconds}`;
+}

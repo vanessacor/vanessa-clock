@@ -6,13 +6,17 @@ main {
   padding-top: 200px;
 }
 
+#home {
+  display: none;
+}
+
 #calendar {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   color: #ff69b4;
 }
 
-#clock {
+.clock-display {
   text-align: center;
   font-family: "Audiowide", cursive;
   color: #ff69b4;
