@@ -19,7 +19,8 @@ function handleSubmit(event) {
 }
 
 function startTimer(minutes) {
-  const miliseconds = minutes * 60000;
+  const startMinutes = parseInt(minutes) + 1;
+  const miliseconds = startMinutes * 60000;
   let startTime = Date.now() + miliseconds;
 
   timerInterval = setInterval(() => {
@@ -36,7 +37,6 @@ function stopTimer() {
   clearInterval(timerInterval);
 }
 
-function printTimer(date) {
-  clockTimer.innerHTML = `${date.minutes} : ${date.seconds}`;
+function printTimer(time) {
+  clockTimer.innerHTML = `${time.minutes} : ${time.seconds}`;
 }
-
