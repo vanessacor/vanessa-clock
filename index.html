@@ -45,11 +45,47 @@
             </div>
 
         </section>
+        
+        <section id="stopwatch">
+            <h2 class="clock-display" id="clock-stopwatch">00 : 00</h2>
+            <div id="services">
+                <button type="submit" class="services-btn" id="start-stopwatch">START</button>
+                <button class="services-btn" id="stop-stopwatch">STOP</button>
+            </div>
+
+        </section>
+
+        <section id="countdown">
+            <h2 class="clock-display" id="calendar-countdown"></h2>
+            <h2 class="clock-display" id="clock-countdown">Pick a Date</h2>
+            
+
+            <form action="">
+                <div class="form-group">
+                <label for="date"></label>
+                <input 
+                    type="date" 
+                    class="form-control" 
+                    id="date-countdown" 
+                    aria-label="input date" 
+                    placeholder="Please Insert a Date"
+                    
+                >
+            </form>
+
+            <div id="services">
+                <button type="submit" class="services-btn" id="start-countdown">START</button>
+                <button class="services-btn" id="stop-countdown">STOP</button>
+            </div>
+
+        </section>
 
     </main>
     <script src="./Utils/formatTime.js"></script>
     <script src="./Utils/getTimeDifference.js"></script>
-    <script src="./timer/timer.js"></script>
+    <!-- <script src="./timer/timer.js"></script>
+    <script src="./StopWatch/stopwatch.js"></script> -->
+    <script src="./Countdown/countdown.js"></script>
     <script src="indexUi.js"></script>
     <!-- <script src="index.js"></script> -->
 </body>

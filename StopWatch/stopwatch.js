@@ -1,19 +1,34 @@
 "use strict";
 
-let interval;
+const startStopwatchBtn = document.getElementById("start-stopwatch");
+const stopStopwatchBtn = document.getElementById("stop-stopwatch");
+const clockStopwatch = document.getElementById("clock-stopwatch");
 
-function startStopWatch() {
+startStopwatchBtn.addEventListener("click", startStopwatch);
+stopStopwatchBtn.addEventListener("click", stopStopwatch);
+
+let stopwatchInterval;
+let elapsedTime = 0;
+
+function startStopwatch() {
   let time = Date.now();
-  let elapsedTime = 0;
   let startTime = time - elapsedTime;
-  interval = setInterval(() => {
+  stopwatchInterval = setInterval(() => {
+    if (new Date(elapsedTime).getMinutes > 60) {
+      stopStopwatch();
+    }
     elapsedTime = Date.now() - startTime;
     elapsedTime = formatTime(new Date(elapsedTime));
-    console.log(elapsedTime.seconds);
+    printStopwatch(elapsedTime);
   }, 1000);
 }
 
-function stopStopWatch() {
-  clearInterval(interval);
+function stopStopwatch() {
+  elapsedTime = 0;
+  clockStopwatch.innerHTML = "00 : 00";
+  clearInterval(stopwatchInterval);
 }
-startStopWatch();
+
+function printStopwatch(time) {
+  clockStopwatch.innerHTML = `${time.minutes} : ${time.seconds}`;
+}

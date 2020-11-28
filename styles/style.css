@@ -43,3 +43,11 @@ main {
 .services-btn:hover {
   border: 2px solid #66fcf1;
 }
+
+#timer {
+  display: none;
+}
+
+#stopwatch {
+  display: none;
+}
