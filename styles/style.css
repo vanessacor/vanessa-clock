@@ -1,12 +1,45 @@
 body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
   background-color: #0b0c10;
 }
 
+h2 {
+  margin-bottom: 40px;
+}
 main {
+  margin: 0 auto;
   padding-top: 200px;
 }
 
-#home {
+#splash-screen {
+  font-family: "Montserrat", sans-serif;
+  color: #ff69b4;
+  text-shadow: 2px 2px 8px #e60073;
+}
+
+#start {
+  background-color: transparent;
+  border: none;
+}
+
+#start:hover {
+  transform: scale(1.5);
+  transition: 1s;
+}
+
+#start span {
+  font-size: 100px;
+  color: #ff69b4;
+}
+
+#home-screen {
+  display: none;
+}
+
+#services-screen {
   display: none;
 }
 
@@ -23,7 +56,7 @@ main {
   text-shadow: 2px 2px 8px #e60073;
 }
 
-#services {
+.services {
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -44,10 +77,27 @@ main {
   border: 2px solid #66fcf1;
 }
 
-#timer {
+#timer-screen {
   display: none;
 }
 
-#stopwatch {
+input {
+  padding: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 20px;
+  color: #ff69b4;
+  box-shadow: 2px 2px 8px #e60073;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #ff69b4;
+}
+
+#stopwatch-screen {
+  display: none;
+}
+
+#countdown-screen {
   display: none;
 }

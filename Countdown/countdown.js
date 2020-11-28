@@ -8,6 +8,8 @@ const clockCountdown = document.getElementById("clock-countdown");
 
 let countdownInterval;
 
+let mindate = new Date();
+mindate = inputDate.min;
 startCountdownBtn.addEventListener("click", handleDateSubmit);
 stopCountdownBtn.addEventListener("click", stopCountdown);
 

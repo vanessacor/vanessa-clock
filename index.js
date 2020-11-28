@@ -6,11 +6,18 @@ function startClock() {
   timerInterval = setInterval(() => {
     let date = new Date(Date.now());
 
-    let today = formatTime(date);
+    let today = formatDate(date);
     printClock(today);
   }, 1000);
 }
 
-startClock();
+function stopClock() {
+  clearInterval(interval);
+}
 
-window.addEventListener("load", startClock);
+function printClock(date) {
+  calendar.innerHTML = `${date.weekDay}, ${date.dayOfMonth} ${date.month} ${date.year}`;
+  clock.innerHTML = `${date.hour} : ${date.minutes} : ${date.seconds}`;
+}
+
+// window.addEventListener("load", startClock);
