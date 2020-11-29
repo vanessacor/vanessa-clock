@@ -11,6 +11,7 @@ let stopwatchInterval;
 let elapsedTime = 0;
 
 function startStopwatch() {
+  const oneSecond = 1000;
   let time = Date.now();
   let startTime = time - elapsedTime;
   stopwatchInterval = setInterval(() => {
@@ -20,7 +21,7 @@ function startStopwatch() {
     elapsedTime = Date.now() - startTime;
     elapsedTime = formatTime(new Date(elapsedTime));
     printStopwatch(elapsedTime);
-  }, 1000);
+  }, oneSecond);
 }
 
 function stopStopwatch() {

@@ -7,12 +7,13 @@ const servicesScreen = document.getElementById("services-screen");
 let interval;
 
 function startClock() {
+  const oneSecond = 1000;
   timerInterval = setInterval(() => {
     let date = new Date(Date.now());
 
     let today = formatDate(date);
     printClock(today);
-  }, 1000);
+  }, oneSecond);
 }
 
 function stopClock() {

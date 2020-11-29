@@ -20,6 +20,7 @@ function handleSubmit(event) {
 }
 
 function startTimer(minutes) {
+  const oneSecond = 1000;
   const startMinutes = parseInt(minutes) + 1;
   const miliseconds = startMinutes * 60000;
   let startTime = Date.now() + miliseconds;
@@ -31,10 +32,11 @@ function startTimer(minutes) {
       return;
     } else countDownTime = formatTime(new Date(countDownTime));
     printTimer(countDownTime);
-  }, 1000);
+  }, oneSecond);
 }
 
-function stopTimer() {
+function stopTimer(event) {
+  event.preventDefault();
   clearInterval(timerInterval);
   resetTimer();
 }

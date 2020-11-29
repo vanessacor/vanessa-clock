@@ -24,12 +24,13 @@ function handleDateSubmit(event) {
 }
 
 function startCountDown(date) {
+  const OneSecond = 1000;
   let futureDate = date.getTime();
   countdownInterval = setInterval(() => {
     let countDownTime = getTimeDifference(futureDate);
     countDownTime = formatTime(countDownTime);
     printCountdownClock(countDownTime);
-  }, 1000);
+  }, OneSecond);
 }
 
 function stopCountdown() {
