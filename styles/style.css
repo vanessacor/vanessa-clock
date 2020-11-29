@@ -37,11 +37,11 @@ main {
 }
 
 #home-screen {
-  display: none;
+  display: block;
 }
 
 #services-screen {
-  display: none;
+  display: flex;
 }
 
 #calendar {

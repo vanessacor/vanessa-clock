@@ -14,7 +14,7 @@ stopTimerBtn.addEventListener("click", stopTimer);
 function handleSubmit(event) {
   event.preventDefault();
   const minutes = inputMinutes.value;
-  if (validateInput(minutes)) {
+  if (validateTimerInput(minutes)) {
     startTimer(minutes);
   } else printFeedbackTimer();
 }
@@ -34,13 +34,12 @@ function startTimer(minutes) {
   }, 1000);
 }
 
-function stopTimer(event) {
-  event.preventDefault();
+function stopTimer() {
   clearInterval(timerInterval);
   resetTimer();
 }
 
-function validateInput(input) {
+function validateTimerInput(input) {
   if (input <= 0 || input > 60 || input == null) {
     return false;
   } else return true;

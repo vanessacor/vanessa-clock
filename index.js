@@ -20,4 +20,7 @@ function printClock(date) {
   clock.innerHTML = `${date.hour} : ${date.minutes} : ${date.seconds}`;
 }
 
-// window.addEventListener("load", startClock);
+window.onload = (event) => {
+  console.log("window loaded");
+  startClock();
+};

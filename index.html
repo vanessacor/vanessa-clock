@@ -11,20 +11,11 @@
 </head>
 <body>
     <main class="container">
-        <section id="splash-screen">
-            <button id="start">
-                <span class="material-icons">alarm</span>
-            </button>
-            <p>Click to Start</p>
-        </section>
-
         <section id="home-screen">
             <h2 id="calendar">Sunday, 9 December 1906</h2>
             <h2 class="clock-display" id="clock">12 : 23 : 45</h2>
-
-           
-
         </section>
+        
         <section id="timer-screen">
             <h2 class="clock-display" id="clock-timer">00 : 00</h2>
 
@@ -53,7 +44,7 @@
         <section id="stopwatch-screen">
             <h2 class="clock-display" id="clock-stopwatch">00 : 00</h2>
             <div class="services">
-                <button type="submit" class="services-btn" id="start-stopwatch">START</button>
+                    <button class="services-btn" id="start-stopwatch">START</button>
                 <button class="services-btn" id="stop-stopwatch">STOP</button>
             </div>
 
@@ -67,6 +58,7 @@
             <form action="">
                 <div class="form-group">
                 <label for="date"></label>
+                <p id="feedback-msg-countdown" class="feedback-message"></p>
                 <input 
                     type="date" 
                     class="form-control" 
@@ -77,7 +69,7 @@
             </form>
 
             <div class="services">
-                <button type="submit" class="services-btn" id="start-countdown">START</button>
+                <button class="services-btn" id="start-countdown">START</button>
                 <button class="services-btn" id="stop-countdown">STOP</button>
             </div>
 
