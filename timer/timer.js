@@ -1,9 +1,10 @@
 "use strict";
 
-const startTimerBtn = document.getElementById("start-timer");
-const stopTimerBtn = document.getElementById("stop-timer");
 const inputMinutes = document.getElementById("minutes-timer");
 const clockDisplayTimer = document.getElementById("clock-timer");
+const feedbackMessageTimer = document.getElementById("feedback-msg-timer");
+const startTimerBtn = document.getElementById("start-timer");
+const stopTimerBtn = document.getElementById("stop-timer");
 
 let timerInterval;
 
@@ -13,9 +14,9 @@ stopTimerBtn.addEventListener("click", stopTimer);
 function handleSubmit(event) {
   event.preventDefault();
   const minutes = inputMinutes.value;
-  if (minutes) {
+  if (validateInput(minutes)) {
     startTimer(minutes);
-  } else console.log("please insert time");
+  } else printFeedbackTimer();
 }
 
 function startTimer(minutes) {
@@ -39,11 +40,21 @@ function stopTimer(event) {
   resetTimer();
 }
 
-function printTimer(time) {
-  clockDisplayTimer.innerHTML = `${time.minutes} : ${time.seconds}`;
+function validateInput(input) {
+  if (input <= 0 || input > 60 || input == null) {
+    return false;
+  } else return true;
 }
 
 function resetTimer() {
   inputMinutes.value = "";
   clockDisplayTimer.innerHTML = "00 : 00";
+}
+
+function printTimer(time) {
+  clockDisplayTimer.innerHTML = `${time.minutes} : ${time.seconds}`;
+}
+
+function printFeedbackTimer() {
+  feedbackMessageTimer.innerHTML = "Please insert minutes";
 }
