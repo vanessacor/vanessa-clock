@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanessa Countdown App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:wght@300;400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <section id="countdown-screen">
+            <h2 class="clock-display" id="calendar-countdown"></h2>
+            <h2 class="clock-display" id="clock-countdown">Pick a Date</h2>
+            
+            <form action="">
+                <div class="form-group">
+                <label for="date"></label>
+                <p id="feedback-msg-countdown" class="feedback-message"></p>
+                <input 
+                    type="date" 
+                    class="form-control" 
+                    id="date-countdown" 
+                    aria-label="input date" 
+                    placeholder="Please Insert a Date"
+                >
+            </form>
+
+            <div class="services">
+                <button class="services-btn" id="start-countdown">START</button>
+                <button class="services-btn" id="stop-countdown">STOP</button>
+            </div>
+
+        </section>
+   
+
+        <section class="services" id="services-screen">
+            <button class="services-btn" id="timer-btn">
+                <a href="/index.html">
+                    HOME
+                </a>
+                </button>
+            <button class="services-btn" id="countdown-btn">
+                <a href="/timer/index.html">
+                TIMER
+                </a>
+            </button>
+            <button class="services-btn" id="stopwatch-btn">
+                <a href="/StopWatch/index.html">
+                    STOPWATCH
+                </a>
+            </button>
+        </section>
+
+    </main>
+    <script src="../Utils/formatTime.js"></script>
+    <script src="../Utils/getTimeDifference.js"></script>
+    <script src="/Countdown/countdown.js"></script>
+</body>
+</html>

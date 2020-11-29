@@ -38,7 +38,7 @@ function stopCountdown() {
 
 function validateCountdownInput(date) {
   const todaysDate = new Date();
-  if (date.getTime() <= todaysDate.getTime() || date == null) {
+  if (date.getTime() <= todaysDate.getTime() || date == "Invalid Date") {
     return false;
   } else return true;
 }
