@@ -3,7 +3,7 @@
 const startTimerBtn = document.getElementById("start-timer");
 const stopTimerBtn = document.getElementById("stop-timer");
 const inputMinutes = document.getElementById("minutes-timer");
-const clockTimer = document.getElementById("clock-timer");
+const clockDisplayTimer = document.getElementById("clock-timer");
 
 let timerInterval;
 
@@ -33,10 +33,17 @@ function startTimer(minutes) {
   }, 1000);
 }
 
-function stopTimer() {
+function stopTimer(event) {
+  event.preventDefault();
   clearInterval(timerInterval);
+  resetTimer();
 }
 
 function printTimer(time) {
-  clockTimer.innerHTML = `${time.minutes} : ${time.seconds}`;
+  clockDisplayTimer.innerHTML = `${time.minutes} : ${time.seconds}`;
+}
+
+function resetTimer() {
+  inputMinutes.value = "";
+  clockDisplayTimer.innerHTML = "00 : 00";
 }

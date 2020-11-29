@@ -10,6 +10,8 @@ Bootcamp exercise. I was asked to develop a mini application similar to a stopwa
 - An attractive ReadMe
 - Must be deployed.
 
+<!-- write something about date obj link to mdn -->
+
 ## Screen Shots, Demo
 
 ## Built with
@@ -23,3 +25,6 @@ Bootcamp exercise. I was asked to develop a mini application similar to a stopwa
 ### Instalation
 
 ## Run Tests
+
+
+clock by Sarote Impheng from the Noun Project
