@@ -1,54 +1,95 @@
+/* reset  */
+html {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
   background-color: #0b0c10;
   font-family: "Montserrat", sans-serif;
-}
-
-h2 {
-  margin-bottom: 40px;
-}
-main {
-  margin: 0 auto;
-  padding-top: 200px;
-}
-
-#start {
-  background-color: transparent;
-  border: none;
-}
-
-#start:hover {
-  transform: scale(1.5);
-  transition: 1s;
-}
-
-#start span {
-  font-size: 100px;
+  font-family: "Montserrat", sans-serif;
   color: #ff69b4;
 }
 
-#home-screen {
-  display: block;
+main {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
+  padding-top: 80px;
 }
 
-#services-screen {
+button {
+  max-width: 200px;
+  margin-top: 50px;
+  border: none;
+  background-color: transparent;
+}
+
+.screen {
   display: flex;
-}
-
-#calendar {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
   color: #ff69b4;
 }
 
 .clock-display {
-  text-align: center;
   font-family: "Audiowide", cursive;
-  color: #ff69b4;
-  text-shadow: 2px 2px 8px #e60073;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-message {
+  display: none;
+  color: #66fcf1;
+}
+
+.form-input {
+  padding: 10px;
+  margin-bottom: 30px;
+  width: 80%;
+  font-size: 16px;
+  color: #faf4f7;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #ff69b4;
+}
+
+.menu-btn {
+  color: #66fcf1;
+  text-shadow: 2px 2px 8px #03a79c;
+}
+
+.menu-btn:hover {
+  border: 2px solid #66fcf1;
+}
+
+.menu-btn a {
+  color: #66fcf1;
+  text-shadow: 2px 2px 8px #03a79c;
+  text-decoration: none;
 }
 
 .services {
@@ -56,42 +97,16 @@ main {
   flex-direction: row;
   align-content: center;
   justify-content: space-around;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 .services-btn {
-  max-width: 200px;
-  margin-top: 50px;
-  border: none;
-  background-color: transparent;
-  color: #66fcf1;
-  text-shadow: 2px 2px 8px #03a79c;
+  color: #ff69b4;
+  text-shadow: 2px 2px 8px #e60073;
+  font-size: 20px;
+  margin-right: 10px;
 }
 
 .services-btn:hover {
-  border: 2px solid #66fcf1;
-}
-
-.services-btn a {
-  font-size: 1.5em;
-  color: #66fcf1;
-  text-shadow: 2px 2px 8px #03a79c;
-  text-decoration: none;
-}
-
-.feedback-message {
-  color: #66fcf1;
-}
-
-input {
-  padding: 10px;
-  margin-bottom: 30px;
-  width: 100%;
-  font-size: 20px;
-  color: #ff69b4;
-  box-shadow: 2px 2px 8px #e60073;
-  outline: none;
-  border: none;
-  background-color: transparent;
-  border-bottom: 2px solid #ff69b4;
+  border: 2px solid #ff69b4;
 }

@@ -11,17 +11,16 @@
 </head>
 <body>
     <main class="container">
-        <section id="countdown-screen">
-            <h2 class="clock-display" id="calendar-countdown"></h2>
-            <h2 class="clock-display" id="clock-countdown">Pick a Date</h2>
+        <section class="screen">
+            <h2 class="calendar-display" id="calendar-countdown"></h2>
+            <h2 class="clock-display" id="clock-countdown"></h2>
             
-            <form action="">
-                <div class="form-group">
-                <label for="date"></label>
-                <p id="feedback-msg-countdown" class="feedback-message"></p>
+            <form action="" class="form-group">
+                <p class="feedback-message">Please Insert Valid Date</p>
+                <label for="date">Please Insert a Date</label>
                 <input 
                     type="date" 
-                    class="form-control" 
+                    class="form-input" 
                     id="date-countdown" 
                     aria-label="input date" 
                     placeholder="Please Insert a Date"
@@ -34,20 +33,19 @@
             </div>
 
         </section>
-   
 
-        <section class="services" id="services-screen">
-            <button class="services-btn" id="timer-btn">
+        <section class="menu">
+            <button class="menu-btn" id="timer-btn">
                 <a href="/index.html">
                     HOME
                 </a>
                 </button>
-            <button class="services-btn" id="countdown-btn">
+            <button class="menu-btn" id="countdown-btn">
                 <a href="/timer/index.html">
                 TIMER
                 </a>
             </button>
-            <button class="services-btn" id="stopwatch-btn">
+            <button class="menu-btn" id="stopwatch-btn">
                 <a href="/StopWatch/index.html">
                     STOPWATCH
                 </a>
