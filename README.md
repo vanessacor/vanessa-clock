@@ -10,7 +10,7 @@ This is my Clock App. It is a clock that runs on the browser and have the follow
 
 - Timer: the user can choose the minutes and clock starts counting down the time until reaches zero.
 
-- Stopwatch: the user clicks on start and time starts counting. The user then can see how many has passed.
+- Stopwatch: the user clicks on start and time starts counting. The user then can see how much has passed.
 
 ## Project Requirements
 
@@ -26,8 +26,8 @@ The project consisted in 3 fases:
 - Fase One:
 
   - Planned the application with a very advanced tool: pen and paper. I did a very rough sketch of how I wanted the app to look like.
-  - Wrote all the functionalities, except for the clock, with no UI, and debbuged using VScode console. 
-  - I decided to use the Date javascript object, as opposed to increments with one second intervals, to improve accuracy 
+  - Wrote all the functionalities, except for the clock, with no UI, and debbuged using VScode console.
+  - I decided to use the Date javascript object, as opposed to increments with one second intervals, to improve accuracy
 
 - Fase Two
 
@@ -36,7 +36,7 @@ The project consisted in 3 fases:
 
 - Fase Three
 
-  - Refactoring: tried to improve my code readability by renaming functions and variables, dividing functionality into smaller functions, and isolating each service into its own file.
+  - Refactoring: tried to improve my code readability by renaming functions and variables, extracting into smaller functions, and isolating each service into its own file.
   <!-- write issues on GitHub Repo
       add sound to timer and countdown (feat)
       refactor: look for code repetions and see if can be refactored (refactor)
@@ -46,15 +46,17 @@ The project consisted in 3 fases:
   -->
   - Deploy on githubpages
 
-
 With this exercise I have learnt:
 
-- Javascript Date Object. When to use new Date() and when to use Date.now(), how to use these to manipulate time. 
+- Javascript Date Object. When to use new Date() and when to use Date.now(), how to use these to manipulate time.
 - SetInterval and clearInterval how to use it to simulate a clock functionality.
-- try to apply some of the clean code principles that I have been learning.
-
+- Try to apply some of the clean code principles that I have been learning.
 
 ## Screen Shots, Demo
+
+![](images/mobile.png)
+
+![](images/lightouse.png)
 
 ## Built with
 
