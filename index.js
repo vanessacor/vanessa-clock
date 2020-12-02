@@ -1,7 +1,7 @@
 "use strict";
 const calendar = document.getElementById("calendar");
 const clock = document.getElementById("clock");
-  
+
 let interval;
 
 function startClock() {
@@ -24,6 +24,5 @@ function printClock(date) {
 }
 
 window.onload = (event) => {
-  console.log("window loaded");
   startClock();
 };
