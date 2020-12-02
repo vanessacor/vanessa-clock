@@ -1,9 +1,7 @@
 "use strict";
 const calendar = document.getElementById("calendar");
 const clock = document.getElementById("clock");
-const homeScreen = document.getElementById("home-screen");
-const servicesScreen = document.getElementById("services-screen");
-
+  
 let interval;
 
 function startClock() {
