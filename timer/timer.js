@@ -13,6 +13,7 @@ stopTimerBtn.addEventListener("click", stopTimer);
 
 function handleSubmit(event) {
   event.preventDefault();
+  startTimerBtn.disabled = true;
   const minutes = inputMinutes.value;
   if (validateTimerInput(minutes)) {
     clearFeedbackMessage();
@@ -49,6 +50,7 @@ function validateTimerInput(input) {
 }
 
 function resetTimer() {
+  startTimerBtn.disabled = false;
   inputMinutes.value = "";
   clockDisplayTimer.innerHTML = "00 : 00";
 }

@@ -14,6 +14,7 @@ stopCountdownBtn.addEventListener("click", stopCountdown);
 
 function handleDateSubmit(event) {
   event.preventDefault();
+  startCountdownBtn.disabled = true;
   const input = inputDate.value;
   const date = new Date(input);
   if (validateCountdownInput(date)) {
@@ -34,6 +35,14 @@ function startCountDown(date) {
 
 function stopCountdown() {
   clearInterval(countdownInterval);
+  resetCountDown();
+}
+
+function resetCountDown() {
+  startCountdownBtn.disabled = false;
+  inputDate.value = "";
+  calendarDisplayCountdown.innerHTML = "";
+  clockDisplayCountdown.innerHTML = "";
 }
 
 function validateCountdownInput(date) {
@@ -45,7 +54,7 @@ function validateCountdownInput(date) {
 
 function printCountdownClock(time) {
   calendarDisplayCountdown.innerHTML = `${time.years} years ${time.months} months`;
-  clockDisplayCountdown.innerHTML = `${time.days} days ${time.minutes} min ${time.seconds} sec`;
+  clockDisplayCountdown.innerHTML = `${time.days} days ${time.hours} hours ${time.minutes} min ${time.seconds} sec`;
 }
 
 function printCountdownFeedback() {
