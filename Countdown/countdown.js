@@ -2,9 +2,7 @@
 
 const calendarDisplayCountdown = document.getElementById("calendar-countdown");
 const clockDisplayCountdown = document.getElementById("clock-countdown");
-const feedbackMessageCountdown = document.getElementById(
-  "feedback-msg-countdown"
-);
+const feedbackMessageCountdown = document.querySelector(".feedback-message");
 const inputDate = document.getElementById("date-countdown");
 const startCountdownBtn = document.getElementById("start-countdown");
 const stopCountdownBtn = document.getElementById("stop-countdown");
@@ -19,6 +17,7 @@ function handleDateSubmit(event) {
   const input = inputDate.value;
   const date = new Date(input);
   if (validateCountdownInput(date)) {
+    clearFeedbackMessage();
     startCountDown(date);
   } else printCountdownFeedback();
 }
@@ -50,5 +49,9 @@ function printCountdownClock(time) {
 }
 
 function printCountdownFeedback() {
-  feedbackMessageCountdown.innerHTML = "The pick a date in the future";
+  feedbackMessageCountdown.style.display = "block";
+}
+
+function clearFeedbackMessage() {
+  feedbackMessageCountdown.style.display = "none";
 }

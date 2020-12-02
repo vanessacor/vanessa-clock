@@ -2,7 +2,7 @@
 
 const inputMinutes = document.getElementById("minutes-timer");
 const clockDisplayTimer = document.getElementById("clock-timer");
-const feedbackMessageTimer = document.getElementById("feedback-msg-timer");
+const feedbackMessageTimer = document.querySelector(".feedback-message");
 const startTimerBtn = document.getElementById("start-timer");
 const stopTimerBtn = document.getElementById("stop-timer");
 
@@ -15,13 +15,14 @@ function handleSubmit(event) {
   event.preventDefault();
   const minutes = inputMinutes.value;
   if (validateTimerInput(minutes)) {
+    clearFeedbackMessage();
     startTimer(minutes);
   } else printFeedbackTimer();
 }
 
 function startTimer(minutes) {
   const oneSecond = 1000;
-  const startMinutes = parseInt(minutes) + 1;
+  const startMinutes = parseInt(minutes);
   const miliseconds = startMinutes * 60000;
   let startTime = Date.now() + miliseconds;
 
@@ -57,5 +58,9 @@ function printTimer(time) {
 }
 
 function printFeedbackTimer() {
-  feedbackMessageTimer.innerHTML = "Please insert minutes";
+  feedbackMessageTimer.style.display = "block";
+}
+
+function clearFeedbackMessage() {
+  feedbackMessageTimer.style.display = "none";
 }
