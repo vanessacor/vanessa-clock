@@ -6,7 +6,7 @@ let interval;
 
 function startClock() {
   const oneSecond = 1000;
-  timerInterval = setInterval(() => {
+  interval = setInterval(() => {
     let date = new Date(Date.now());
 
     let today = formatDate(date);
