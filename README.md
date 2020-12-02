@@ -56,7 +56,7 @@ With this exercise I have learnt:
 
 ![](images/mobile.png)
 
-![](images/lightouse.png)
+![](images/lighthouse.png)
 
 ## Built with
 
