@@ -37,13 +37,7 @@ The project consisted in 3 fases:
 - Fase Three
 
   - Refactoring: tried to improve my code readability by renaming functions and variables, extracting into smaller functions, and isolating each service into its own file.
-  <!-- write issues on GitHub Repo
-      add sound to timer and countdown (feat)
-      refactor: look for code repetions and see if can be refactored (refactor)
-      add leading zeros to minutes and seconds when less than 10 (ui)
-      add pause functionality to timer and countdown and stopwatch (feat)
-      use local storage for the countdown time
-  -->
+
   - Deploy on githubpages
 
 With this exercise I have learnt:

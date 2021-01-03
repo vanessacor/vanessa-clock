@@ -19,7 +19,7 @@ function startStopwatch() {
       stopStopwatch();
     }
     elapsedTime = Date.now() - startTime;
-    elapsedTime = formatTime(new Date(elapsedTime));
+    elapsedTime = new Date(elapsedTime)
     printStopwatch(elapsedTime);
   }, oneSecond);
 }
@@ -31,5 +31,8 @@ function stopStopwatch() {
 }
 
 function printStopwatch(time) {
-  clockStopwatch.innerHTML = `${time.minutes} : ${time.seconds}`;
+  time = formatTime(time);
+  const minutes = addzeros(time.minutes)
+	const seconds = addzeros(time.seconds)
+  clockStopwatch.innerHTML = `${minutes} : ${seconds}`;
 }

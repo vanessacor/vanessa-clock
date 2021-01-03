@@ -32,7 +32,7 @@ function startTimer(minutes) {
     if (countDownTime < 0) {
       stopTimer();
       return;
-    } else countDownTime = formatTime(new Date(countDownTime));
+    } else countDownTime = new Date(countDownTime);
     printTimer(countDownTime);
   }, oneSecond);
 }
@@ -56,7 +56,10 @@ function resetTimer() {
 }
 
 function printTimer(time) {
-  clockDisplayTimer.innerHTML = `${time.minutes} : ${time.seconds}`;
+  time = formatTime(time);
+  const minutes = addzeros(time.minutes);
+  const seconds = addzeros(time.seconds);
+  clockDisplayTimer.innerHTML = `${minutes} : ${seconds}`;
 }
 
 function printFeedbackTimer() {

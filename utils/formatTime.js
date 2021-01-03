@@ -49,3 +49,10 @@ function formatTime(date) {
   const timeFormated = { years, months, days, hours, minutes, seconds };
   return timeFormated;
 }
+
+function addzeros(num) {
+  if (num < 10) {
+    num = "0" + num;
+  }
+  return num;
+}
